@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climate English — Climate Vocabulary Learning</title>
+<style>
+:root{--bg:#f5f8f7;--card:#fff;--text:#18312b;--muted:#60756f;--accent:#176b5b;--accent2:#e8f4ef;--line:#dbe7e2;--danger:#c94b4b;--shadow:0 10px 30px rgba(23,107,91,.09)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#123f36,#176b5b);color:#fff;padding:18px 5%;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #0002}
+.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;font-size:22px}.brand small{display:block;font-size:11px;opacity:.75;font-weight:500}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav button{background:transparent;border:0;color:#fff;padding:9px 12px;border-radius:10px;cursor:pointer;font-weight:600}nav button:hover,nav button.active{background:#ffffff20}
+main{max-width:1180px;margin:auto;padding:35px 20px 70px}.page{display:none}.page.active{display:block}
+.hero{background:linear-gradient(135deg,#e7f5ef,#fff);border:1px solid var(--line);border-radius:28px;padding:48px;display:grid;grid-template-columns:1.4fr .8fr;gap:30px;align-items:center;box-shadow:var(--shadow)}
+h1{font-size:46px;margin:0 0 14px;line-height:1.05}.hero p{font-size:18px;color:var(--muted);line-height:1.65}.btn{border:0;background:var(--accent);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer}.btn.secondary{background:#fff;color:var(--accent);border:1px solid var(--line)}.btn:hover{transform:translateY(-1px)}
+.globe{font-size:130px;text-align:center}
+.section-title{margin:38px 0 18px}.section-title h2{margin:0 0 6px}.section-title p{margin:0;color:var(--muted)}
+.stats,.cards,.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}
+.stat,.card,.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.stat b{font-size:28px}.stat span{display:block;color:var(--muted);margin-top:4px}
+.category{padding:18px;border-radius:16px;background:var(--accent2);cursor:pointer}.category:hover{outline:2px solid #176b5b30}.category b{display:block;margin-bottom:5px}.category span{color:var(--muted);font-size:14px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.search{flex:1;min-width:220px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font-size:15px}
+.term-card h3{margin:0 0 5px;font-size:22px}.term-card .pron{color:var(--accent);font-weight:700}.meaning{color:var(--muted);margin:9px 0}.example{background:#f5faf8;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;font-style:italic}.tag{display:inline-block;background:#eef4f1;padding:5px 9px;border-radius:20px;font-size:12px;margin-top:10px}
+.quiz-wrap{max-width:760px;margin:auto}.progress{height:9px;background:#e3ece8;border-radius:20px;overflow:hidden;margin:14px 0 24px}.progress i{display:block;height:100%;background:var(--accent);width:0}.question{font-size:24px;font-weight:800;margin-bottom:20px}.options{display:grid;gap:10px}.option{padding:15px;border:1px solid var(--line);background:#fff;border-radius:12px;text-align:left;cursor:pointer;font-size:16px}.option:hover{border-color:var(--accent)}.option.correct{background:#e6f6ed;border-color:#35a66d}.option.wrong{background:#fff0f0;border-color:#d66}
+.result{text-align:center;padding:30px}.score{font-size:52px;font-weight:900;color:var(--accent)}
+.flash{min-height:270px;display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer;background:linear-gradient(135deg,#fff,#edf8f4)}.flash h2{font-size:36px}.flash p{color:var(--muted);font-size:18px}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:18px}.match-col{display:grid;gap:10px}.match-item{padding:14px;background:#fff;border:1px solid var(--line);border-radius:12px;cursor:pointer}.match-item.selected{outline:2px solid var(--accent);background:var(--accent2)}.match-item.done{opacity:.5;text-decoration:line-through}
+.fill input{padding:12px;border:1px solid var(--line);border-radius:10px}.feedback{margin-top:15px;font-weight:700}
+.reading{line-height:1.8;font-size:17px}.wordbank{background:var(--accent2);padding:15px;border-radius:14px}.speak-q{padding:16px;border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+footer{text-align:center;color:var(--muted);padding:30px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:30px}h1{font-size:36px}.stats,.cards,.grid{grid-template-columns:1fr 1fr}.globe{font-size:90px}nav{display:none}}
+@media(max-width:520px){.stats,.cards,.grid,.match{grid-template-columns:1fr}main{padding:20px 12px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="brand">🌍 Climate English<small>Climate vocabulary learning tool</small></div>
+<nav id="nav"></nav>
+</div></header>
+
+<main>
+<section id="home" class="page active">
+<div class="hero"><div><h1>Learn Climate English 🌱</h1><p>Климаттық терминдерді ағылшын тілінде үйреніңіз, тыңдаңыз, қайталаңыз және интерактивті тапсырмалар арқылы бекітіңіз.</p><button class="btn" onclick="showPage('vocabulary')">Start Learning →</button></div><div class="globe">🌍</div></div>
+<div class="section-title"><h2>Your learning dashboard</h2><p>Оқу барысыңыз осы браузерде автоматты түрде сақталады.</p></div>
+<div class="stats"><div class="stat"><b id="sTerms">30</b><span>Climate terms</span></div><div class="stat"><b id="sLearned">0</b><span>Learned</span></div><div class="stat"><b id="sQuiz">0%</b><span>Best quiz</span></div><div class="stat"><b id="sMatches">0</b><span>Matches</span></div></div>
+<div class="section-title"><h2>Explore topics</h2></div><div class="cards" id="cats"></div>
+</section>
+
+<section id="vocabulary" class="page">
+<div class="section-title"><h2>📚 Climate Vocabulary</h2><p>Терминді басып, айтылуын тыңдауға және мысалды көруге болады.</p></div>
+<div class="toolbar"><input class="search" id="search" placeholder="Search: drought, climate, renewable..."><select class="search" id="filter"><option>All topics</option><option>Weather & Climate</option><option>Climate Change</option><option>Environmental Problems</option><option>Solutions</option><option>Natural Disasters</option></select></div>
+<div class="grid" id="terms"></div>
+</section>
+
+<section id="flashcards" class="page">
+<div class="quiz-wrap"><div class="section-title"><h2>🃏 Flashcards</h2><p>Карточканы басыңыз — аудармасы мен анықтамасы ашылады.</p></div><div class="panel flash" id="flash" onclick="flipFlash()"></div><div class="toolbar"><button class="btn secondary" onclick="prevFlash()">← Previous</button><button class="btn" onclick="nextFlash()">Next →</button></div></div>
+</section>
+
+<section id="quiz" class="page">
+<div class="quiz-wrap"><div class="section-title"><h2>🎯 Climate Quiz</h2><p>Терминдерді қаншалықты меңгергеніңізді тексеріңіз.</p></div><div class="panel" id="quizBox"></div></div>
+</section>
+
+<section id="matching" class="page">
+<div class="section-title"><h2>🔗 Matching Game</h2><p>Ағылшын терминін оның дұрыс мағынасымен сәйкестендіріңіз.</p></div><div class="panel"><div class="match" id="match"></div><div class="feedback" id="matchFeedback"></div></div>
+</section>
+
+<section id="reading" class="page">
+<div class="section-title"><h2>📖 Reading</h2><p>Мәтінді оқып, климаттық терминдерді контекст арқылы түсініңіз.</p></div>
+<div class="panel reading"><h2>Climate Change and Our Future</h2>
+<p><b>Climate change</b> is one of the major environmental challenges of our time. The Earth's average <b>temperature</b> is increasing, and this process is known as <b>global warming</b>. Human activities such as burning <b>fossil fuels</b> produce <b>greenhouse gases</b>, including carbon dioxide.</p>
+<p>Climate change can lead to <b>extreme weather</b>, longer <b>heatwaves</b>, severe <b>droughts</b>, and more frequent <b>floods</b>. It can also contribute to <b>melting glaciers</b> and <b>rising sea levels</b>.</p>
+<p>There are solutions. <b>Renewable energy</b>, such as solar and wind energy, can reduce carbon emissions. People can also save energy, recycle waste, protect forests and reduce their <b>carbon footprint</b>.</p>
+<div class="wordbank"><b>Find these words:</b> climate change · global warming · fossil fuels · greenhouse gases · drought · renewable energy · carbon footprint</div></div>
+</section>
+
+<section id="speaking" class="page">
+<div class="section-title"><h2>🗣️ Speaking Practice</h2><p>Сұрақтарға жауап беріп, төмендегі vocabulary-ді қолдануға тырысыңыз.</p></div>
+<div class="grid" id="speakingList"></div>
+</section>
+
+<section id="solutions" class="page">
+<div class="section-title"><h2>💡 Climate Solutions</h2><p>Климаттың өзгеруін азайтуға байланысты негізгі әрекеттер.</p></div>
+<div class="cards">
+<div class="card"><h3>☀️ Renewable Energy</h3><p>Use <b>solar energy</b>, <b>wind energy</b> and other clean sources.</p></div>
+<div class="card"><h3>🌳 Protect Forests</h3><p>Prevent <b>deforestation</b> and support <b>reforestation</b>.</p></div>
+<div class="card"><h3>♻️ Reduce Waste</h3><p><b>Recycle</b>, reuse products and reduce unnecessary consumption.</p></div>
+<div class="card"><h3>🚲 Sustainable Transport</h3><p>Walk, cycle or use <b>public transport</b> when possible.</p></div>
+<div class="card"><h3>💡 Save Energy</h3><p>Improve <b>energy efficiency</b> and reduce electricity use.</p></div>
+<div class="card"><h3>🌱 Reduce Carbon Footprint</h3><p>Choose actions that reduce your personal <b>carbon footprint</b>.</p></div>
+</div>
+</section>
+</main>
+<footer>Climate English • Interactive learning tool • 2026</footer>
+
+<script>
+const terms=[
+["climate","Climate","/ˈklaɪmət/","климат","Weather conditions of a place over a long period.","Climate patterns are changing.","Weather & Climate"],
+["weather","Weather","/ˈweðə(r)/","ауа райы","The condition of the atmosphere at a particular time.","The weather is sunny today.","Weather & Climate"],
+["temperature","Temperature","/ˈtemprətʃə(r)/","температура","How hot or cold something is.","Average temperatures are rising.","Weather & Climate"],
+["precipitation","Precipitation","/prɪˌsɪpɪˈteɪʃən/","жауын-шашын","Rain, snow or other water falling from the atmosphere.","Precipitation varies by season.","Weather & Climate"],
+["humidity","Humidity","/hjuːˈmɪdəti/","ылғалдылық","The amount of water vapour in the air.","High humidity can feel uncomfortable.","Weather & Climate"],
+["atmosphere","Atmosphere","/ˈætməsfɪə(r)/","атмосфера","The layer of gases surrounding Earth.","The atmosphere contains greenhouse gases.","Weather & Climate"],
+["climate change","Climate Change","/ˈklaɪmət tʃeɪndʒ/","климаттың өзгеруі","Long-term changes in Earth's climate.","Climate change affects ecosystems.","Climate Change"],
+["global warming","Global Warming","/ˌɡləʊbl ˈwɔːmɪŋ/","жаһандық жылыну","The long-term rise in Earth's average temperature.","Global warming affects the whole planet.","Climate Change"],
+["greenhouse effect","Greenhouse Effect","/ˈɡriːnhaʊs ɪˌfekt/","жылыжай әсері","The process of gases trapping heat in the atmosphere.","The greenhouse effect keeps Earth warm.","Climate Change"],
+["greenhouse gases","Greenhouse Gases","/ˈɡriːnhaʊs ˈɡæsɪz/","парниктік газдар","Gases that absorb and re-emit heat.","Carbon dioxide is a greenhouse gas.","Climate Change"],
+["carbon dioxide","Carbon Dioxide","/ˌkɑːbən daɪˈɒksaɪd/","көмірқышқыл газы","A gas released by burning fuels and other processes.","Cars produce carbon dioxide.","Climate Change"],
+["carbon emissions","Carbon Emissions","/ˈkɑːbən ɪˈmɪʃənz/","көміртек шығарындылары","Carbon-containing gases released into the atmosphere.","We need to reduce carbon emissions.","Climate Change"],
+["fossil fuels","Fossil Fuels","/ˈfɒsl fjuːəlz/","қазба отындар","Coal, oil and gas formed over millions of years.","Burning fossil fuels produces emissions.","Climate Change"],
+["drought","Drought","/draʊt/","құрғақшылық","A long period with little or no rain.","The drought damaged crops.","Natural Disasters"],
+["flood","Flood","/flʌd/","су тасқыны","A large amount of water covering normally dry land.","Heavy rain caused a flood.","Natural Disasters"],
+["heatwave","Heatwave","/ˈhiːtweɪv/","аптап ыстық","A long period of unusually hot weather.","The heatwave lasted for several days.","Natural Disasters"],
+["storm","Storm","/stɔːm/","дауыл","A period of strong wind, rain or snow.","A powerful storm hit the coast.","Natural Disasters"],
+["wildfire","Wildfire","/ˈwaɪldfaɪə(r)/","орман өрті","An uncontrolled fire in a natural area.","Wildfires can destroy forests.","Natural Disasters"],
+["melting glaciers","Melting Glaciers","/ˈmeltɪŋ ˈɡlæsiəz/","мұздықтардың еруі","The loss of ice from glaciers due to warming.","Melting glaciers contribute to sea-level rise.","Climate Change"],
+["rising sea levels","Rising Sea Levels","/ˈraɪzɪŋ siː ˈlevəlz/","теңіз деңгейінің көтерілуі","An increase in the average level of the oceans.","Rising sea levels threaten coastal areas.","Climate Change"],
+["air pollution","Air Pollution","/eə pəˈluːʃən/","ауаның ластануы","Harmful substances in the air.","Air pollution can affect health.","Environmental Problems"],
+["deforestation","Deforestation","/diːˌfɒrɪstəˈreɪʃən/","ормандардың жойылуы","The removal or destruction of forests.","Deforestation causes habitat loss.","Environmental Problems"],
+["desertification","Desertification","/dɪˌzɜːtɪfɪˈkeɪʃən/","шөлейттену","The process by which land becomes increasingly dry.","Desertification reduces agricultural productivity.","Environmental Problems"],
+["biodiversity","Biodiversity","/ˌbaɪəʊdaɪˈvɜːsəti/","биоалуантүрлілік","The variety of living organisms in an area.","Climate change can threaten biodiversity.","Environmental Problems"],
+["ecosystem","Ecosystem","/ˈiːkəʊˌsɪstəm/","экожүйе","Living things and their physical environment as a system.","A forest is a complex ecosystem.","Environmental Problems"],
+["renewable energy","Renewable Energy","/rɪˈnjuːəbl ˈenədʒi/","жаңартылатын энергия","Energy from sources naturally replenished over time.","Solar power is renewable energy.","Solutions"],
+["solar energy","Solar Energy","/ˈsəʊlə ˈenədʒi/","күн энергиясы","Energy obtained from sunlight.","Solar energy is a clean source of power.","Solutions"],
+["wind energy","Wind Energy","/ˈwɪnd ˈenədʒi/","жел энергиясы","Energy generated from moving air.","Wind energy can produce electricity.","Solutions"],
+["sustainability","Sustainability","/səˌsteɪnəˈbɪləti/","тұрақты даму/тұрақтылық","Using resources without harming future generations.","Sustainability is important for our future.","Solutions"],
+["carbon footprint","Carbon Footprint","/ˈkɑːbən ˈfʊtprɪnt/","көміртек ізі","The amount of greenhouse gases linked to an activity or person.","We can reduce our carbon footprint.","Solutions"]
+];
+
+const navItems=[["home","🏠 Home"],["vocabulary","📚 Vocabulary"],["flashcards","🃏 Flashcards"],["quiz","🎯 Quiz"],["matching","🔗 Matching"],["reading","📖 Reading"],["speaking","🗣️ Speaking"],["solutions","💡 Solutions"]];
+document.getElementById("nav").innerHTML=navItems.map(x=>`<button onclick="showPage('${x[0]}')" id="n-${x[0]}">${x[1]}</button>`).join("");
+
+const cats=[["Weather & Climate","weather, climate, temperature, precipitation"],["Climate Change","global warming, greenhouse gases, carbon emissions"],["Environmental Problems","pollution, deforestation, biodiversity"],["Natural Disasters","drought, flood, heatwave, wildfire"],["Solutions","renewable energy, sustainability, recycling"]];
+document.getElementById("cats").innerHTML=cats.map(c=>`<div class="category" onclick="showPage('vocabulary');setFilter('${c[0]}')"><b>${c[0]}</b><span>${c[1]}</span></div>`).join("");
+
+function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));document.getElementById(id).classList.add("active");document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));document.getElementById("n-"+id)?.classList.add("active");window.scrollTo({top:0,behavior:"smooth"});if(id==="quiz")renderQuiz();if(id==="matching")renderMatch();if(id==="speaking")renderSpeaking();}
+function speak(text){if("speechSynthesis"in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.82;speechSynthesis.speak(u)}}
+function renderTerms(){let q=document.getElementById("search").value.toLowerCase(), f=document.getElementById("filter").value;let arr=terms.filter(t=>(f==="All topics"||t[6]===f)&&(t[1].toLowerCase().includes(q)||t[3].toLowerCase().includes(q)||t[4].toLowerCase().includes(q)));document.getElementById("terms").innerHTML=arr.map((t,i)=>`<div class="card term-card"><h3>${t[1]}</h3><div class="pron">${t[2]} <button class="btn secondary" style="padding:5px 9px" onclick="speak('${t[1]}')">🔊</button></div><div class="meaning"><b>Қазақша:</b> ${t[3]}</div><p>${t[4]}</p><div class="example">“${t[5]}”</div><span class="tag">${t[6]}</span><button class="btn" style="margin-top:12px;width:100%" onclick="learnTerm('${t[0]}')">✓ Mark as learned</button></div>`).join("")||"<div class='panel'>No terms found.</div>";}
+function setFilter(v){document.getElementById("filter").value=v;renderTerms()}
+document.getElementById("search").addEventListener("input",renderTerms);document.getElementById("filter").addEventListener("change",renderTerms);
+let learned=JSON.parse(localStorage.getItem("learned")||"[]");function learnTerm(id){if(!learned.includes(id)){learned.push(id);localStorage.setItem("learned",JSON.stringify(learned));updateStats();renderTerms()}}
+function updateStats(){document.getElementById("sLearned").textContent=learned.length;document.getElementById("sQuiz").textContent=localStorage.getItem("bestQuiz")||"0%";document.getElementById("sMatches").textContent=localStorage.getItem("matches")||0}
+renderTerms();updateStats();
+
+let fi=0,flipped=false;function renderFlash(){let t=terms[fi];document.getElementById("flash").innerHTML=flipped?`<div><h2>${t[3]}</h2><p>${t[4]}</p><div class="example">${t[5]}</div><small>Click to see the English term</small></div>`:`<div><h2>${t[1]}</h2><p>${t[2]}</p><button class="btn" onclick="event.stopPropagation();speak('${t[1]}')">🔊 Listen</button><p>Click to flip</p></div>`}
+function flipFlash(){flipped=!flipped;renderFlash()}function nextFlash(){fi=(fi+1)%terms.length;flipped=false;renderFlash()}function prevFlash(){fi=(fi-1+terms.length)%terms.length;flipped=false;renderFlash()}renderFlash();
+
+const questions=[
+["What does “drought” mean?",["Құрғақшылық","Су тасқыны","Ылғалдылық","Боран"],0],
+["Which is a renewable energy source?",["Coal","Oil","Solar energy","Natural gas"],2],
+["What is global warming?",["A rise in Earth's average temperature","Daily weather changes","Heavy rainfall","A type of storm"],0],
+["Which gas is a greenhouse gas?",["Oxygen","Carbon dioxide","Helium","Hydrogen"],1],
+["What does deforestation mean?",["Planting trees","Protecting forests","Destroying/removing forests","Recycling waste"],2],
+["What is a carbon footprint?",["A type of shoe","Greenhouse gas emissions linked to an activity","A weather map","A forest ecosystem"],1],
+["What can rising sea levels threaten?",["Coastal areas","Mountains only","Deserts only","Clouds"],0],
+["Which word means “биоалуантүрлілік”?",["Biodiversity","Sustainability","Atmosphere","Precipitation"],0],
+["What can help reduce carbon emissions?",["Renewable energy","Burning more fossil fuels","Deforestation","Wasting energy"],0],
+["What does “heatwave” mean?",["A long period of unusually hot weather","A period of heavy snow","A strong earthquake","A flood"],0]
+];
+let qi=0,qscore=0;function renderQuiz(){if(qi>=questions.length){let pct=Math.round(qscore/questions.length*100);let best=Math.max(pct,parseInt(localStorage.getItem("bestQuiz")||0));localStorage.setItem("bestQuiz",best+"%");updateStats();document.getElementById("quizBox").innerHTML=`<div class="result"><div class="score">${pct}%</div><h2>Quiz complete!</h2><p>You answered ${qscore} of ${questions.length} correctly.</p><button class="btn" onclick="qi=0;qscore=0;renderQuiz()">Try Again</button></div>`;return}let q=questions[qi];document.getElementById("quizBox").innerHTML=`<div><b>Question ${qi+1} / ${questions.length}</b><div class="progress"><i style="width:${qi/questions.length*100}%"></i></div><div class="question">${q[0]}</div><div class="options">${q[1].map((o,i)=>`<button class="option" onclick="answerQuiz(${i})">${o}</button>`).join("")}</div></div>`}
+function answerQuiz(i){let q=questions[qi],btns=document.querySelectorAll(".option");btns.forEach(b=>b.disabled=true);if(i===q[2]){qscore++;btns[i].classList.add("correct")}else{btns[i].classList.add("wrong");btns[q[2]].classList.add("correct")}setTimeout(()=>{qi++;renderQuiz()},650)}
+
+let mLeft=[],mRight=[],selected=null;function renderMatch(){let sample=[terms[6],terms[13],terms[21],terms[25],terms[29],terms[19]].sort(()=>Math.random()-.5);mLeft=sample.map(t=>t[1]);mRight=sample.map(t=>({id:t[1],text:t[3]})).sort(()=>Math.random()-.5);selected=null;document.getElementById("match").innerHTML=`<div class="match-col">${mLeft.map((x,i)=>`<div class="match-item" id="ml${i}" onclick="pickLeft(${i})">${x}</div>`).join("")}</div><div class="match-col">${mRight.map((x,i)=>`<div class="match-item" id="mr${i}" onclick="pickRight(${i})">${x.text}</div>`).join("")}</div>`;document.getElementById("matchFeedback").textContent="";window.matchSample=sample}
+function pickLeft(i){selected=i;document.querySelectorAll("#match .match-col:first-child .match-item").forEach(x=>x.classList.remove("selected"));document.getElementById("ml"+i).classList.add("selected")}
+function pickRight(j){if(selected===null)return;let left=mLeft[selected],right=mRight[j];if(left===right.id){document.getElementById("ml"+selected).classList.add("done");document.getElementById("mr"+j).classList.add("done");let n=parseInt(localStorage.getItem("matches")||0)+1;localStorage.setItem("matches",n);updateStats();document.getElementById("matchFeedback").textContent="✓ Correct!";}else document.getElementById("matchFeedback").textContent="Try again.";selected=null}
+
+const speaking=[
+["What causes climate change?","greenhouse gases · fossil fuels · carbon emissions"],
+["How does global warming affect our planet?","rising temperatures · melting glaciers · sea levels"],
+["What can teenagers do to help the environment?","recycle · save energy · public transport"],
+["Why is renewable energy important?","solar energy · wind energy · clean energy"],
+["How can we protect biodiversity?","protect forests · ecosystems · reduce pollution"],
+["What are the effects of droughts and floods?","agriculture · water resources · extreme weather"]
+];
+function renderSpeaking(){document.getElementById("speakingList").innerHTML=speaking.map((x,i)=>`<div class="card speak-q"><h3>${i+1}. ${x[0]}</h3><p><b>Use:</b> ${x[1]}</p><button class="btn secondary" onclick="speak('${x[0]}')">🔊 Listen to question</button></div>`).join("")}
+</script>
+</body>
+</html>
